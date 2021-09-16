@@ -1,0 +1,78 @@
+{
+  "code": "int",
+  "status": "string",
+  "copyright": "string",
+  "attributionText": "string",
+  "attributionHTML": "string",
+  "data": {
+    "offset": "int",
+    "limit": "int",
+    "total": "int",
+    "count": "int",
+    "results": [
+      {
+        "id": 1,
+        "name": "name",
+        "description": "description",
+        "modified": "Date",
+        "resourceURI": "resourceURI",
+        "urls": [
+          {
+            "type": "string",
+            "url": "string"
+          }
+        ],
+        "thumbnail": {
+          "path": "path",
+          "extension": "extension"
+        },
+        "comics": {
+          "available": "int",
+          "returned": "int",
+          "collectionURI": "string",
+          "items": [
+            {
+              "resourceURI": "resourceURI",
+              "name": "name"
+            }
+          ]
+        },
+        "stories": {
+          "available": "int",
+          "returned": "int",
+          "collectionURI": "string",
+          "items": [
+            {
+              "resourceURI": "string",
+              "name": "string",
+              "type": "string"
+            }
+          ]
+        },
+        "events": {
+          "available": "int",
+          "returned": "int",
+          "collectionURI": "string",
+          "items": [
+            {
+              "resourceURI": "string",
+              "name": "string"
+            }
+          ]
+        },
+        "series": {
+          "available": "int",
+          "returned": "int",
+          "collectionURI": "string",
+          "items": [
+            {
+              "resourceURI": "string",
+              "name": "string"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "etag": "string"
+}
