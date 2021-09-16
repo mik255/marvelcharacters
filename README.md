@@ -14,7 +14,7 @@
   * Tempo de desenvolvimento acumulado: 10h
   * Desenvolvido utilizando flutter null safety
   * contém alguns VOs (Value Objects)
-  * este projeto está sem a classe que contém as keys para executar:
+  * este projeto está sem a classe que contém as keys para executar, faça o seguinte:
   crie uma classe MarvelApiKeys com os atributos staticos
   { publicKey ='' , privateKey = '', hash = '' timeStamp ='' }
 
