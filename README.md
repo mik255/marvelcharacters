@@ -1,16 +1,28 @@
-# marvelcharacters
+# marvelcharacters <h1>
 
-A new Flutter project.
+ Este projeto foi criado com a Api da Marvel:
 
-## Getting Started
+# Detalhes técnicos 
+  * Framework: Flutter
+  * Arquitetura: Clean archteture
+  * Injeção de dependência: Modular
+  * Gerenciador de estados: Triple
+  * Boas Práticas: TDD, clean code, SOLID
+  
+# Fontes, detalhes e mais técnicas
+  * JavaScript md5: https://blueimp.github.io/JavaScript-MD5/ (para calcular o api key)
+  * Tempo de desenvolvimento acumulado: 10h
+  * Desenvolvido utilizando flutter null safety
+  * contém alguns VOs (Value Objects)
+  * este projeto está sem a classe que contém as keys para executar:
+  crie uma classe MarvelApiKeys com os atributos staticos
+  { publicKey ='' , privateKey = '', hash = '' timeStamp ='' }
 
-This project is a starting point for a Flutter application.
+## Abaixo estão algumas screnshots do app;
+  
+![WhatsApp Image 2021-09-16 at 18 37 31](https://user-images.githubusercontent.com/72231971/133689722-73e40549-9b7b-4854-9ff8-d9d8924f3b55.jpeg) , 
+![WhatsApp Image 2021-09-16 at 18 40 40 (1)](https://user-images.githubusercontent.com/72231971/133689877-2b700b65-aff1-4fc5-9ffe-84226adbf24d.jpeg)
+![WhatsApp Image 2021-09-16 at 18 40 40 (2)](https://user-images.githubusercontent.com/72231971/133689879-1b8b28c8-db27-4345-af6f-08b9f32916ea.jpeg)
+![WhatsApp Image 2021-09-16 at 18 40 40](https://user-images.githubusercontent.com/72231971/133689885-7d58c763-86c0-45ed-b724-5ca9c251aeec.jpeg)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
