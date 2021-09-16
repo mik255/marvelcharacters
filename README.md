@@ -13,9 +13,9 @@
   * JavaScript md5: https://blueimp.github.io/JavaScript-MD5/ (para calcular o api key)
   * Tempo de desenvolvimento acumulado: 10h
   * Desenvolvido utilizando flutter null safety
-  * contém alguns VOs (Value Objects)
-  * este projeto está sem a classe que contém as keys para executar, faça o seguinte:
-  crie uma classe MarvelApiKeys com os atributos staticos
+  * Contém alguns VOs (Value Objects)
+  * Este projeto está sem a classe que contém as keys para executar, faça o seguinte:
+  Crie uma classe MarvelApiKeys com os atributos staticos
   { publicKey ='' , privateKey = '', hash = '' timeStamp ='' }
 
 ## Abaixo estão algumas screnshots do app;
