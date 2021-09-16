@@ -4,7 +4,7 @@
 
 # Detalhes técnicos 
   * Framework: Flutter
-  * Arquitetura: Clean archteture
+  * Arquitetura: Clean Architecture
   * Injeção de dependência: Modular
   * Gerenciador de estados: Triple
   * Boas Práticas: TDD, clean code, SOLID
