@@ -1,4 +1,4 @@
-# marvelcharacters <h1>
+# Marvel characters app <h1>
 
  Este projeto foi criado com a Api da Marvel:
 
