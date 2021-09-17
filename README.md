@@ -18,7 +18,8 @@
   Crie uma classe MarvelApiKeys com os atributos staticos
   { publicKey ='' , privateKey = '', hash = '' timeStamp ='' }
 
-## Abaixo estão algumas screnshots do app;
+## Abaixo estão algumas screenshots
+ do app;
   
 ![WhatsApp Image 2021-09-16 at 18 37 31](https://user-images.githubusercontent.com/72231971/133689722-73e40549-9b7b-4854-9ff8-d9d8924f3b55.jpeg) , 
 ![WhatsApp Image 2021-09-16 at 18 40 40 (1)](https://user-images.githubusercontent.com/72231971/133689877-2b700b65-aff1-4fc5-9ffe-84226adbf24d.jpeg)
