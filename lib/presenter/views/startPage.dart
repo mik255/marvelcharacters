@@ -62,30 +62,7 @@ class _StartPageState extends ModularState<StartPage, HomeController> {
                   if (index == state.length - 1) {
                     return Center(child: CircularProgressIndicator());
                   }
-                  return CustomListItem(
-                    character: character,
-                    thumbnail: Container(
-                      height: 180,
-                      width: 100,
-                      clipBehavior: Clip.hardEdge,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset: Offset(0, 2),
-                            )
-                          ],
-                          color: Color(0xff222429)),
-                      child: FadeInImage.assetNetwork(
-                        placeholder: 'assets/images/loadingimg.gif',
-                        image: state[index].thumbnail.getUrlImg(),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  );
+                  return CharactersList(character: character,);
                 }),
             onError: (context, error) => Text(error.toString()),
             onLoading: (context) => ListView.builder(
@@ -97,23 +74,8 @@ class _StartPageState extends ModularState<StartPage, HomeController> {
                   if (index == store.listCharacter.length - 1) {
                     return Center(child: CircularProgressIndicator());
                   }
-                  return CustomListItem(
+                  return CharactersList(
                     character: character,
-                    thumbnail: Container(
-                      clipBehavior: Clip.hardEdge,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.1),
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset: Offset(0, 2),
-                            )
-                          ],
-                          color: Color(0xff222429)),
-                      child: Image.network(character.thumbnail.getUrlImg()),
-                    ),
                   );
                 })),
       ],

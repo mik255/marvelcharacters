@@ -3,13 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:marvelcharacters/domain/entity/character/character.dart';
 import 'openCharacterDetails.dart';
 
-class CustomListItem extends StatelessWidget {
-  CustomListItem({
+class CharactersList extends StatelessWidget {
+  CharactersList({
     Key? key,
-    required this.thumbnail,
     required this.character,
   }) : super(key: key);
-  final Widget thumbnail;
   Character character;
 
   @override
@@ -30,7 +28,27 @@ class CustomListItem extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 flex: 3,
-                child: thumbnail,
+                child: Container(
+                  height: 180,
+                  width: 100,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomLeft: Radius.circular(10)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 2),
+                        )
+                      ],
+                      color: Color(0xff222429)),
+                  child: FadeInImage.assetNetwork(
+                    placeholder: 'assets/images/loadingimg.gif',
+                    image: character.thumbnail.getUrlImg(),
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
               Expanded(
                 flex: 3,
