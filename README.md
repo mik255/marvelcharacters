@@ -12,10 +12,15 @@
 # Fontes, detalhes e mais técnicas
   * JavaScript md5: https://blueimp.github.io/JavaScript-MD5/ (para calcular a api key)
   * Tempo de desenvolvimento acumulado: 3 dias
-  * Este projeto está sem a classe que contém as keys para executar, faça o seguinte:
+  * Este projeto está sem a classe que contém as keys por questão de segurança.
+ 
+# Para executar faça o seguinte:
+ 
   Crie uma classe MarvelApiKeys com os atributos staticos
   { publicKey ='' , privateKey = '', hash = '' timeStamp ='' }
 
+ ou baixe o app: https://docs.google.com/uc?export=download&id=1_CuN6-3kvSsI79vLoWiHsr79th6lt9k7
+ 
 ## Abaixo estão algumas screenshots
 <p align="center">
   <img src="https://user-images.githubusercontent.com/72231971/133689722-73e40549-9b7b-4854-9ff8-d9d8924f3b55.jpeg" width="256" height="455">
