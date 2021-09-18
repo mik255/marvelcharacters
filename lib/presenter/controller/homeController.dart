@@ -4,7 +4,7 @@ import 'package:marvelcharacters/data/model/character/characterModel.dart';
 import 'package:marvelcharacters/domain/entity/character/character.dart';
 import 'package:marvelcharacters/domain/usecase/characterUsecase.dart';
 
-class HomeController extends NotifierStore<Exception, List<Character>> {
+class HomeController extends StreamStore<Exception, List<Character>> {
   late Future<List<CharacterModel>> future;
   late CharacterUseCase characterUseCase;
 
@@ -15,22 +15,25 @@ class HomeController extends NotifierStore<Exception, List<Character>> {
   List<Character> listCharacter = [];
   bool loadactive = false;
 
-  Future<void> maxScrollExtentVerify() async {
-    scrollController.addListener(() {
-      double onLoadPosition = scrollController.position.maxScrollExtent -20;
+   maxScrollExtentVerify(){
+    scrollController.addListener(() async{
+      double onLoadPosition = scrollController.position.maxScrollExtent-20;
       if (scrollController.position.pixels >= onLoadPosition) {
         print('test');
         offset += 10;
-        fetchCharacters();
+        await fetchCharacters();
       }
     });
   }
 
-  fetchCharacters() async {
+  Future<void>fetchCharacters() async {
     setLoading(true);
-    var result = await characterUseCase.fetchCharactersUseCase(limit, offset);
-    listCharacter.addAll(result);
-    update(listCharacter);
-    setLoading(false);
+     await characterUseCase.fetchCharactersUseCase(limit, offset).then((value){
+      listCharacter.addAll(value);
+      update(listCharacter);
+      setLoading(false);
+      print('update');
+    });
+
   }
 }

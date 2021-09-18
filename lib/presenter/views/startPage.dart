@@ -42,8 +42,13 @@ class _StartPageState extends ModularState<StartPage, HomeController> {
           children: [
             Container(
                 height: MediaQuery.of(context).size.height,
-                child: Image.asset('assets/images/loading.jpg', fit: BoxFit.cover,)),
-            Container(color: Colors.black54,),
+                child: Image.asset(
+                  'assets/images/loading.jpg',
+                  fit: BoxFit.cover,
+                )),
+            Container(
+              color: Colors.black54,
+            ),
           ],
         ),
         ScopedBuilder(
@@ -51,21 +56,10 @@ class _StartPageState extends ModularState<StartPage, HomeController> {
           onLoading: (context) => Column(mainAxisAlignment: MainAxisAlignment.end, children: [initial]),
           onState: (context, value) => initial = Container(),
         ),
-        ScopedBuilder(
-            store: store,
-            onState: (context, List<Character> state) => ListView.builder(
-                controller: store.scrollController,
-                padding: const EdgeInsets.all(8),
-                itemCount: state.length,
-                itemBuilder: (BuildContext context, int index) {
-                  var character = state[index];
-                  if (index == state.length - 1) {
-                    return Center(child: CircularProgressIndicator());
-                  }
-                  return CharactersList(character: character,);
-                }),
-            onError: (context, error) => Text(error.toString()),
-            onLoading: (context) => ListView.builder(
+        TripleBuilder(
+          store: store,
+          builder: (context, triple) {
+            return ListView.builder(
                 controller: store.scrollController,
                 padding: const EdgeInsets.all(8),
                 itemCount: store.listCharacter.length,
@@ -77,7 +71,10 @@ class _StartPageState extends ModularState<StartPage, HomeController> {
                   return CharactersList(
                     character: character,
                   );
-                })),
+                });
+          },
+
+        ),
       ],
     )));
   }

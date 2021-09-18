@@ -25,7 +25,7 @@ dependencies:
     sdk: flutter
   dio: ^4.0.0
   crypto:
-  flutter_triple: ^1.0.6
+  flutter_triple: ^1.2.4+3
   flutter_modular: ^3.2.2+1
 
 
