@@ -15,28 +15,30 @@ class _ComicZoomItemState extends State<ComicZoomItem> {
     return Scaffold(
         body: Hero(
       tag: widget.comic.resourceURI,
-      child: Stack(
-        children: [
-          Container(
-            height: MediaQuery.of(context).size.height,
-            child: Image.asset(
-              'assets/images/comicsbackground.jpg',
-              fit: BoxFit.cover,
-            ),
-          ),
-          Container(
-            color: Colors.black87,
-          ),
-          Center(
-            child: Container(
-              height: 250,
-              width: 150,
-              child: Image.network(
-                widget.comic.thumbnail.getUrlImg(),
+      child: InteractiveViewer(
+        child: Stack(
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height,
+              child: Image.asset(
+                'assets/images/comicsbackground.jpg',
+                fit: BoxFit.cover,
               ),
             ),
-          )
-        ],
+            Container(
+              color: Colors.black87,
+            ),
+            Center(
+              child: Container(
+                height: 250,
+                width: 150,
+                child: Image.network(
+                  widget.comic.thumbnail.getUrlImg(),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     ));
   }
