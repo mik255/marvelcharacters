@@ -19,8 +19,6 @@
   { publicKey ='' , privateKey = '', hash = '' timeStamp ='' }
 
 ## Abaixo estão algumas screenshots
- do app;
-  
 <p align="center">
   <img src="https://user-images.githubusercontent.com/72231971/133689722-73e40549-9b7b-4854-9ff8-d9d8924f3b55.jpeg" width="256" height="455">
   <img src="https://user-images.githubusercontent.com/72231971/133689877-2b700b65-aff1-4fc5-9ffe-84226adbf24d.jpeg" width="256" height="455">
