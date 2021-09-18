@@ -4,7 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_triple/flutter_triple.dart';
 import 'package:marvelcharacters/domain/entity/character/character.dart';
 import 'package:marvelcharacters/presenter/controller/homeController.dart';
-import 'package:marvelcharacters/presenter/widgets/item.dart';
+import 'package:marvelcharacters/presenter/widgets/characterCard.dart';
 
 class StartPage extends StatefulWidget {
   const StartPage({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:marvelcharacters/domain/entity/character/character.dart';
-import 'itemtow.dart';
+import 'openCharacterDetails.dart';
 
 class CustomListItem extends StatelessWidget {
   CustomListItem({
