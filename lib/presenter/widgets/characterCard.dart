@@ -34,7 +34,7 @@ class CustomListItem extends StatelessWidget {
               ),
               Expanded(
                 flex: 3,
-                child: _VideoDescription(
+                child: DescriptionSide(
                   heroName: character.name,
                   description: character.description,
                   comicsCount: character.comics.length,
@@ -48,8 +48,8 @@ class CustomListItem extends StatelessWidget {
   }
 }
 
-class _VideoDescription extends StatelessWidget {
-  const _VideoDescription({
+class DescriptionSide extends StatelessWidget {
+  const DescriptionSide({
     Key? key,
     required this.heroName,
     required this.description,

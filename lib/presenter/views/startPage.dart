@@ -42,13 +42,8 @@ class _StartPageState extends ModularState<StartPage, HomeController> {
           children: [
             Container(
                 height: MediaQuery.of(context).size.height,
-                child: Image.asset(
-                  'assets/images/loading.jpg',
-                  fit: BoxFit.cover,
-                )),
-            Container(
-              color: Colors.black54,
-            ),
+                child: Image.asset('assets/images/loading.jpg', fit: BoxFit.cover,)),
+            Container(color: Colors.black54,),
           ],
         ),
         ScopedBuilder(
