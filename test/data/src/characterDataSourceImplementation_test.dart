@@ -25,7 +25,7 @@ void main() {
   });
   test('should throw a error when the call is unccessful', () {
     when(() => httpClient.get(any())).thenThrow(new ArgumentError());
-    final result = characterDataSource.fetchCharactersDataSource(1,1);
+    final result = characterDataSource.fetchCharactersDataSource(1, 1);
     expect(() => result, throwsArgumentError);
   });
 }

@@ -6,21 +6,13 @@ import 'thumbnailModel.dart';
 class CharacterModel extends Character {
   ThumbnailModel characterThumbmailModel;
   List<ComicModel> comicModels;
+
   CharacterModel(
-      {required int id,
-       required String name,
-       required this.characterThumbmailModel,
-       required String description,
-       required this.comicModels})
-      : super(
-      id: id,
-      name: name,
-      thumbnail: characterThumbmailModel,
-      comics: comicModels,
-      description: description);
+      {required int id, required String name, required this.characterThumbmailModel, required String description, required this.comicModels})
+      : super(id: id, name: name, thumbnail: characterThumbmailModel, comics: comicModels, description: description);
 
   factory CharacterModel.fromJson(Map<String, dynamic> jsonParser) {
-   List<dynamic> comicsMap = jsonParser['comics']['items'];
+    List<dynamic> comicsMap = jsonParser['comics']['items'];
     return CharacterModel(
         id: jsonParser['id'],
         name: jsonParser['name'],
@@ -29,12 +21,11 @@ class CharacterModel extends Character {
         comicModels: List<ComicModel>.from(comicsMap.map((e) => ComicModel.fromJson(e))));
   }
 
-
   Map<String, dynamic> toJson() => {
-    "id": id,
-    'name': name,
-    'description': description,
-    'thumbnail': characterThumbmailModel.toJson(),
-    'comicModels': comicModels.map((e) => e.toJson()).toList(),
-  };
+        "id": id,
+        'name': name,
+        'description': description,
+        'thumbnail': characterThumbmailModel.toJson(),
+        'comicModels': comicModels.map((e) => e.toJson()).toList(),
+      };
 }

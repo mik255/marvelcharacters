@@ -67,7 +67,11 @@ class _ComicsDetailsState extends ModularState<ComicsDetails, ComicsDetailsContr
                                           width: 200,
                                           child: Text(
                                             widget.character.name,
-                                            style: TextStyle(color: Colors.white,fontFamily: 'HeroesAssembleBoldExpandtalic', fontSize: 30, fontWeight: FontWeight.w800),
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'HeroesAssembleBoldExpandtalic',
+                                                fontSize: 30,
+                                                fontWeight: FontWeight.w800),
                                           ),
                                         ),
                                       ),
@@ -86,7 +90,11 @@ class _ComicsDetailsState extends ModularState<ComicsDetails, ComicsDetailsContr
                                           width: 200,
                                           child: Text(
                                             widget.character.description,
-                                            style: TextStyle(color: Colors.white, fontFamily: 'HeroesAssembleBoldExpandtalic', fontSize: 15, fontWeight: FontWeight.w600),
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'HeroesAssembleBoldExpandtalic',
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600),
                                           ),
                                         ),
                                       ),
@@ -104,7 +112,11 @@ class _ComicsDetailsState extends ModularState<ComicsDetails, ComicsDetailsContr
                                           width: 200,
                                           child: Text(
                                             'Comics',
-                                            style: TextStyle(color: Colors.white, fontFamily: 'HeroesAssembleBoldExpandtalic', fontSize: 20, fontWeight: FontWeight.w600),
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontFamily: 'HeroesAssembleBoldExpandtalic',
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600),
                                           ),
                                         ),
                                       ),
@@ -122,9 +134,7 @@ class _ComicsDetailsState extends ModularState<ComicsDetails, ComicsDetailsContr
                                             padding: const EdgeInsets.all(8),
                                             itemCount: state.length,
                                             itemBuilder: (BuildContext context, int index) {
-                                              return Padding(
-                                                  padding: const EdgeInsets.all(8.0),
-                                                  child: HeroItem(comic: state[index]));
+                                              return Padding(padding: const EdgeInsets.all(8.0), child: HeroItem(comic: state[index]));
                                             }),
                                       ),
                                     ],
@@ -139,37 +149,40 @@ class _ComicsDetailsState extends ModularState<ComicsDetails, ComicsDetailsContr
                   ),
               onError: (context, error) => Text(error.toString()),
               onLoading: (context) => Stack(
-                children: [
-                  Container(
-                      height: MediaQuery.of(context).size.height,
-                      child: Image.asset('assets/images/telatwoloading.png',fit: BoxFit.cover,)),
-                  Container(
-                    height: MediaQuery.of(context).size.height,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        circularProgressIndicator(),
-                        SizedBox(height: 30,)
-                      ],
-                    ),
-                  ),
-
-
-                ],
-              ))),
+                    children: [
+                      Container(
+                          height: MediaQuery.of(context).size.height,
+                          child: Image.asset(
+                            'assets/images/telatwoloading.png',
+                            fit: BoxFit.cover,
+                          )),
+                      Container(
+                        height: MediaQuery.of(context).size.height,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            circularProgressIndicator(),
+                            SizedBox(
+                              height: 30,
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ))),
     );
   }
 }
 
 class HeroItem extends StatelessWidget {
-  HeroItem({Key ?key,required this.comic}) : super(key: key);
+  HeroItem({Key? key, required this.comic}) : super(key: key);
   Comic comic;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context)=>ComicZoomItem(comic: comic)));
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ComicZoomItem(comic: comic)));
       },
       child: Hero(
         tag: comic.resourceURI,

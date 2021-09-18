@@ -28,7 +28,7 @@ class CharacterDataSourceImplementation implements CharacterDataSource {
   }
 
   @override
-  Future<List<Comic>> fetchComicsFromIdSource(int id)async {
+  Future<List<Comic>> fetchComicsFromIdSource(int id) async {
     late HttpClientResponse response;
     var endpoint = characterComics(id: id);
     response = await httpClient.get(endpoint);

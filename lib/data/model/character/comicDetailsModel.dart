@@ -7,9 +7,7 @@ class ComicDetailsModels extends Comic {
       : super(resourceURI: resourceURI, name: name, thumbnail: thumbnail);
 
   factory ComicDetailsModels.fromJson(Map<String, dynamic> jsonParser) {
-
-    return ComicDetailsModels(resourceURI: jsonParser['resourceURI'], name: '',
-        thumbnail: ThumbnailModel.fromJson(jsonParser['thumbnail']));
+    return ComicDetailsModels(resourceURI: jsonParser['resourceURI'], name: '', thumbnail: ThumbnailModel.fromJson(jsonParser['thumbnail']));
   }
 
   Map<String, dynamic> toJson() => {"resourceURI": resourceURI, 'name': name, "thumbnail": thumbnail.getUrlImg()};
