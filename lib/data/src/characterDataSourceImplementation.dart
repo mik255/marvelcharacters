@@ -19,7 +19,8 @@ class CharacterDataSourceImplementation implements CharacterDataSource {
     response = await httpClient.get(endpoint);
 
     if (response.statusCode == 200) {
-      List<dynamic> charactersMap = response.data['data']['results'];
+      var data = jsonDecode(response.data);
+      List<dynamic> charactersMap = data['data']['results'];
       return List<CharacterModel>.from(charactersMap.map((e) => CharacterModel.fromJson(e)));
     } else {
       throw Exception('error ${response.statusCode}');
@@ -32,7 +33,8 @@ class CharacterDataSourceImplementation implements CharacterDataSource {
     var endpoint = characterComics(id: id);
     response = await httpClient.get(endpoint);
     if (response.statusCode == 200) {
-      List<dynamic> comicsMap = response.data['data']['results'];
+      var data = jsonDecode(response.data);
+      List<dynamic> comicsMap = data['data']['results'];
       return List<Comic>.from(comicsMap.map((e) => ComicDetailsModels.fromJson(e)));
     } else {
       throw Exception('error ${response.statusCode}');

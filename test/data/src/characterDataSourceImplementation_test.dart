@@ -16,7 +16,8 @@ void main() {
     characterDataSource = CharacterDataSourceImplementation(httpClient);
   });
   test('should call the get method with correct url', () async {
-    var dataResult = HttpClientResponse(statusCode: 200, data: fixture('marvelCharacterResponse.json'));
+    String response = fixture('marvelCharacterResponse.json');
+    var dataResult = HttpClientResponse(statusCode: 200, data: response);
     var endpoint = charactersEndpoint(limit: 1, offset: 1);
     when(() => httpClient.get(endpoint)).thenAnswer((_) async => dataResult);
     await characterDataSource.fetchCharactersDataSource(1, 1);

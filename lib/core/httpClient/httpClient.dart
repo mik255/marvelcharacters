@@ -5,7 +5,7 @@ abstract class HttpClient{
 }
 
 class HttpClientResponse{
-  final dynamic data;
+  final String data;
   final int? statusCode;
 
   HttpClientResponse({required this.data,required this.statusCode});
