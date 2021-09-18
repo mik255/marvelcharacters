@@ -80,7 +80,7 @@ class _VideoDescription extends StatelessWidget {
             ),
             Text(
               description,
-              style: const TextStyle(fontSize: 10.0, color: Colors.white, fontFamily: 'HeroesAssembleBoldExpandtalic'),
+              style: const TextStyle(fontSize: 10.0, color: Colors.white),
             ),
             const Padding(padding: EdgeInsets.symmetric(vertical: 1.0)),
             Text(

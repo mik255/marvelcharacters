@@ -47,7 +47,7 @@ class _StartPageState extends ModularState<StartPage, HomeController> {
                   fit: BoxFit.cover,
                 )),
             Container(
-              color: Colors.black45,
+              color: Colors.black54,
             ),
           ],
         ),
