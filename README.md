@@ -11,7 +11,7 @@
   
 # Fontes, detalhes e mais técnicas
   * JavaScript md5: https://blueimp.github.io/JavaScript-MD5/ (para calcular o api key)
-  * Tempo de desenvolvimento acumulado: 10h
+  * Tempo de desenvolvimento acumulado: 3 dias
   * Desenvolvido utilizando flutter null safety
   * Contém alguns VOs (Value Objects)
   * Este projeto está sem a classe que contém as keys para executar, faça o seguinte:
