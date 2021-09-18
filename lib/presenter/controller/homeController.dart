@@ -9,12 +9,13 @@ class HomeController extends NotifierStore<Exception,List<Character>>{
   late CharacterUseCase characterUseCase;
   HomeController(this.characterUseCase) : super([]);
   ScrollController scrollController = ScrollController();
-   int currentLoadCount = 10;
+   int offset = 0;
+   int limit = 10;
   List<Character> listCharacter =[];
   Future<void> maxScrollExtentVerify()async{
     scrollController.addListener((){
      if(scrollController.position.pixels==scrollController.position.maxScrollExtent){
-       currentLoadCount+=10;
+       offset+=10;
        fetchCharacters();
      }
     });
@@ -22,9 +23,9 @@ class HomeController extends NotifierStore<Exception,List<Character>>{
 
   fetchCharacters()async{
     setLoading(true);
-    var result = await characterUseCase.fetchCharactersUseCase(currentLoadCount,0);
-    listCharacter = result;
-    update(result);
+    var result = await characterUseCase.fetchCharactersUseCase(limit,offset);
+    listCharacter.addAll(result);
+    update(listCharacter);
     setLoading(false);
   }
 }
