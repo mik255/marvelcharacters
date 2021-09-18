@@ -40,4 +40,18 @@ class CharacterDataSourceImplementation implements CharacterDataSource {
       throw Exception('error ${response.statusCode}');
     }
   }
+
+  @override
+  Future<List<Character>> fetchCharactersFromName(String name) async{
+    late HttpClientResponse response;
+    var endpoint = fetchCharactersFromNameEndPoint(name: name);
+    response = await httpClient.get(endpoint);
+    if (response.statusCode == 200) {
+      var data = jsonDecode(response.data);
+      List<dynamic> charactersMap = data['data']['results'];
+      return List<CharacterModel>.from(charactersMap.map((e) => CharacterModel.fromJson(e)));
+    } else {
+      throw Exception('error ${response.statusCode}');
+    }
+  }
 }

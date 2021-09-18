@@ -3,7 +3,7 @@ import 'package:flutter_triple/flutter_triple.dart';
 import 'package:marvelcharacters/data/model/character/characterModel.dart';
 import 'package:marvelcharacters/domain/entity/character/character.dart';
 import 'package:marvelcharacters/domain/entity/character/comic.dart';
-import 'package:marvelcharacters/domain/usecase/characterUsecase.dart';
+import 'package:marvelcharacters/domain/usecase/feachCharacters.dart';
 import 'package:marvelcharacters/domain/usecase/fetchComicsFromId.dart';
 
 class ComicsDetailsController extends NotifierStore<Exception, List<Comic>> {
