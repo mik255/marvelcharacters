@@ -86,26 +86,41 @@ class DescriptionSide extends StatelessWidget {
           BoxDecoration(borderRadius: BorderRadius.only(topRight: Radius.circular(10), bottomRight: Radius.circular(10)), color: Colors.black45),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 0.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              heroName,
-              style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0, color: Colors.white, fontFamily: 'HeroesAssembleBoldExpandtalic'),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 2.0),
-            ),
-            Text(
-              description,
-              style: const TextStyle(fontSize: 10.0, color: Colors.white),
-            ),
-            const Padding(padding: EdgeInsets.symmetric(vertical: 1.0)),
-            Text(
-              '$comicsCount comics',
-              style: const TextStyle(fontSize: 10.0, color: Colors.white, fontFamily: 'HeroesAssembleBoldExpandtalic'),
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                    child: Container(
+                      width: 100,
+                      child: Text(
+                        heroName,
+                        style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0, color: Colors.white, fontFamily: 'HeroesAssembleBoldExpandtalic'),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Text(
+                      '$comicsCount comics',
+                      style: const TextStyle(fontSize: 10.0, color: Colors.amber, fontFamily: 'HeroesAssembleBoldExpandtalic'),
+                    ),
+                  ),
+                ],
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 2.0),
+              ),
+              Text(
+                description+description+description+description,
+                style: const TextStyle(fontSize: 10.0, color: Colors.white),
+              ),
+
+            ],
+          ),
         ),
       ),
     );

@@ -13,10 +13,13 @@ class HomeController extends NotifierStore<Exception, List<Character>> {
   int offset = 0;
   int limit = 10;
   List<Character> listCharacter = [];
+  bool loadactive = false;
 
   Future<void> maxScrollExtentVerify() async {
     scrollController.addListener(() {
-      if (scrollController.position.pixels == scrollController.position.maxScrollExtent) {
+      double onLoadPosition = scrollController.position.maxScrollExtent -20;
+      if (scrollController.position.pixels >= onLoadPosition) {
+        print('test');
         offset += 10;
         fetchCharacters();
       }
