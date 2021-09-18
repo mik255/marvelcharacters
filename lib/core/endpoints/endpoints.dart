@@ -8,3 +8,7 @@ String charactersEndpoint({required int limit, required int offset}) {
 String characterComics({required int id}) {
   return "http://gateway.marvel.com/v1/public/characters/$id/comics?ts=${MarvelApiKeys.timeStamp}&apikey=${MarvelApiKeys.publicKey}&hash=${MarvelApiKeys.hash}";
 }
+
+String fetchCharactersFromNameEndPoint({required String name}) {
+  return "http://gateway.marvel.com/v1/public/characters?ts=${MarvelApiKeys.timeStamp}&apikey=${MarvelApiKeys.publicKey}&hash=${MarvelApiKeys.hash}&nameStartsWith=$name";
+}

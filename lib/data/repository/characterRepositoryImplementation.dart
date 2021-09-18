@@ -17,4 +17,9 @@ class CharacterRepositoryImplementation implements CharacterRepository {
   Future<List<Comic>> fetchComicsFromId(int id) async {
     return await _characterDataSource.fetchComicsFromIdSource(id);
   }
+
+  @override
+  Future<List<Character>> fetchCharactersFromName(String name) async{
+    return await _characterDataSource.fetchCharactersFromName(name);
+  }
 }
