@@ -1,4 +1,4 @@
-# Marvel characters app <h1>
+# Marvel characters app Estudo de clean arch <h1>
 
  Este projeto foi criado com a Api da Marvel:
 
